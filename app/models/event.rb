@@ -47,7 +47,7 @@ class Event < ApplicationRecord
           ArgumentError
          end) == ArgumentError
       errors.add(start_date, 'must be a valid datetime')
-      end
+    end
   end
 
   def start_date_is_greater_than_today
