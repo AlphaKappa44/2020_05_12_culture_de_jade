@@ -48,7 +48,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  #belles erreurs
+  gem "better_errors"
+  gem "binding_of_caller"
 end
+
+gem "letter_opener", :group => :development 
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
@@ -65,3 +71,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker'
 
 gem 'devise'
+
+gem 'better'
+
+gem 'dotenv-rails'

@@ -1,17 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#POur acceder au site en ligne:
+
+https://culture-de-jade.herokuapp.com
+
+
+Clone this repo and run bundle install then db:create et db:migrate
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5.1
 
-* System dependencies
+* System dependencies 
 
 * Configuration
 
-* Database creation
+* Database creation Posgresql
 
 * Database initialization
 
