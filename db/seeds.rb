@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -8,12 +10,12 @@
 
 require 'faker'
 
-#User.create!(
+# User.create!(
 #  email: "#{Faker::Name.first_name}@yopmail.com",
 #  first_name: Faker::Name.first_name,
 #  last_name: Faker::Name.last_name,
 #  description: Faker::Lorem.paragraph)
-#end
+# end
 
 User.destroy_all
 Event.destroy_all
@@ -22,13 +24,16 @@ Attendance.destroy_all
 users = []
 events = []
 
-10.times do |i|
+10.times do |_i|
   users << User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: Faker::Internet.email(domain: 'yopmail'),
+    email: Faker::Internet.email(domain: 'yopmail.com'),
     description: Faker::Lorem.paragraphs,
-    encrypted_password: 'test'#Faker::Internet.password
+    password: 'test00' # Faker::Internet.password
   )
-  puts "10 new users created!"
+
+  
+  puts User.last.email
 end
+puts '10 new users created!'

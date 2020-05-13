@@ -75,3 +75,4 @@ gem 'devise'
 gem 'better'
 
 gem 'dotenv-rails'
+gem "table_print", "~> 1.5"

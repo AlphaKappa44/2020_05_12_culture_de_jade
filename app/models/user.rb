@@ -25,26 +25,26 @@ class User < ApplicationRecord
   has_many :events, foreign_key: 'author_id', class_name: 'Event'
 
 
-  validates :email, #voir si conflit avec la gem authentification
-            uniqueness: true,
-            format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: 'Veuillez saisir une adresse email au format valide' },
-            presence: true,
-            length: { maximum: 256 }
+  #validates :email, #voir si conflit avec la gem authentification
+  #          uniqueness: true,
+   #         format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: 'Veuillez saisir une adresse email au format valide' },
+    #        presence: true,
+     #       length: { maximum: 256 }
 
-  validates :encrypted_password, #voir si conflit avec la gem authentification
-            presence: true,
-            length: { maximum: 50 }
+ # validates :encrypted_password, #voir si conflit avec la gem authentification
+  #          presence: true,
+   #         length: { minimum: 6 }
 
-  validates :description,
-            presence: true,
-            length: { in: 10..500 }
+  #validates :description,
+   #         presence: true,
+    #        length: { in: 10..500 }
 
-  validates :first_name,
-            presence: true,
-            length: { in: 2..30 }
+  #validates :first_name,
+   #         presence: true,
+    #        length: { in: 2..30 }
 
-  validates :last_name,
-            presence: true,
-            length: { in: 2..30 }
-end
+  #validates :last_name,
+   #         presence: true,
+    #        length: { in: 2..30 }
+       end
 
