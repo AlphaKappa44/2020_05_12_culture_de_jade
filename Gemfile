@@ -53,6 +53,7 @@ group :development do
   gem "binding_of_caller"
 end
 
+# ouvrir les mais dans le browser en test avant la prod sur heroku
 gem "letter_opener", :group => :development 
 
 
